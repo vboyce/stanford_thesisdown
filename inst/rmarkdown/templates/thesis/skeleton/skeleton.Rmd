@@ -1,27 +1,21 @@
 ---
-title: 'My Final College Paper'
-author: 'Your R. Name'
-date: 'May 20xx'
-institution: 'Reed College'
-division: 'Mathematics and Natural Sciences'
-advisor: 'Advisor F. Name'
-# If you have more two advisors, un-silence line 7
-#altadvisor: 'Your Other Advisor'
-department: 'Mathematics'
-degree: 'Bachelor of Arts'
+title: 'The Future of Scholarship'
+author: 'Mary J. Stanford'
+date: 'May 2018'
+advisor: 'Advisor T. Greatest'
+firstreader: 'L. O. Sunshine'
+secondreader: 'Carl Friedrich Gauss'
+department: 'Psychology'
+institution: 'Stanford University'
 knit: bookdown::render_book
 site: bookdown::bookdown_site
 
 # The next two lines allow you to change the spacing in your thesis. You can 
 # switch out \onehalfspacing with \singlespacing or \doublespacing, if desired.
 header-includes:
-    - \usepackage{setspace}\onehalfspacing
+    - \usepackage{setspace}
+    - \onehalfspacing
 
-# This will automatically install the {remotes} package and {thesisdown}
-# Change this to FALSE if you'd like to install them manually on your own.
-params:
-  'Install needed packages for {thesisdown}': True
-  
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.
 output:
@@ -35,7 +29,7 @@ output:
 # for the .RMD files. If you are NOT producing a PDF, delete or silence
 # lines 25-39 in this YAML header.
 abstract: |
-  `r if(knitr:::is_latex_output()) paste(readLines(here::here("prelims", "00-abstract.Rmd")), collapse = "\n  ")`
+ I'm an abstract right here, look at me!
 # If you'd rather include the preliminary content in files instead of inline
 # like below, use a command like that for the abstract above.  Note that a tab 
 # is needed on the line after the `|`.
@@ -46,19 +40,10 @@ dedication: |
 preface: |
   This is an example of a thesis setup to use the reed thesis document class 
   (for LaTeX) and the R bookdown package, in general.
-abbreviations:
-  ABC: American Broadcasting Company
-  CBS: Colombia Broadcasting System
-  CUS: Computer User Services
-  PBS: Public Broadcasting System
-  NBC: National Broadcasting Company
-# Note that abbreviations in lowercase letters will NOT be automatically capitalized
-# Delete or silence the abbreviations section if you do not want a list of abbreviations
-  
 # Specify the location of the bibliography below
 bibliography: bib/thesis.bib
 # Download your specific csl file and refer to it in the line below.
-csl: csl/apa.csl
+csl: csl/apa7.csl
 lot: true
 lof: true
 ---
